@@ -260,7 +260,7 @@ if is_available "telescope.nvim" then
       local cwd = vim.fn.stdpath "config" .. "/.."
       local search_dirs = {}
       for _, dir in ipairs(astronvim.supported_configs) do -- search all supported config locations
-        if dir == astronvim.install.home then 
+        if dir == astronvim.install.home then
           if vim.loop.os_uname().sysname == "Linux" then
             dir = dir .. "/lua/user"
           elseif vim.loop.os_uname().sysname == "Windows_NT" then
